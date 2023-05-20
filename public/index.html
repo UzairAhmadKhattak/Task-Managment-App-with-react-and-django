@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../src/assets/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css'> 
+    <link rel="stylesheet" href="../src/assets/app.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>TMA</title>
+  
+  </head>
+  
+  <body>
+    <div id="root"></div>
+    
+  <script>
+
+function decrease_user_image_size(classname){
+  var user_image = $(`.${classname}`)
+  if (user_image !== undefined)
+       {
+         for (var i=0; i< user_image.length; i++)  {
+          user_image[i].style.width = "28px";
+          user_image[i].style.height = "28px";
+          user_image[i].style.borderRadius = "14px";
+
+         }
+       }
+}
+
+function change_comment_placeholder(){
+  $(".postComment").attr("placeholder","Type")
+}
+
+function reduce_comment_section_padding(){
+  var overlay = $(".overlay")
+       if (overlay !== undefined)
+       {
+         for (var i=0; i< overlay.length; i++)  {         
+            overlay[i].style.padding = "0px"
+            overlay[i].style.paddingTop = "2px"
+         }
+       }
+  
+}
+
+function change_font_size(classname){
+  var comments = $(`.${classname}`)
+       if (comments !== undefined)
+       {
+         for (var i=0; i< comments.length; i++)  {
+           comments[i].style.fontSize = "large";
+         }
+       }
+}
+
+function change_button_size(classname){
+  var button_area = $(`.${classname}`)
+       if (button_area !== undefined)
+       {
+         for (var i=0; i< button_area.length; i++)  {
+          button_area[i].style.padding = "2px";
+          button_area[i].style.fontSize = "10px";
+          button_area[i].style.marginRight = "1px";
+          button_area[i].style.borderRadius = "px";
+          
+         }
+       }
+}
+
+function onclick_reply(){
+  $(document).on("click",".replyBtn",()=>{
+        change_font_size("form")
+        change_button_size("postBtn")
+        change_button_size("cancelBtn")
+        decrease_user_image_size("imgdefault")
+        change_comment_placeholder()
+        })     
+}
+      $(function(){
+        change_font_size("comment-title")
+        change_font_size("form")
+        change_button_size("postBtn")
+        decrease_user_image_size("imgdefault")
+        change_comment_placeholder()
+        reduce_comment_section_padding()
+        onclick_reply()          
+
+
+      });
+
+
+
+</script>
+  </body>
+</html>

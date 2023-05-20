@@ -1,0 +1,200 @@
+
+.project,.SideBarDropdown{
+  display: inline-block;
+}
+
+.SideBarDropdown{
+  float: right;
+  padding-right: 5px;
+  padding-top: 15px;
+  }
+.project{
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-right: 30px;
+ 
+ }
+
+.sec_parent {
+  margin: 1rem;
+}
+.sec_child {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 50px;
+}
+
+#top_navbar{
+  /* margin-right: 20px; */
+  border-bottom: 2px solid rgb(116, 116, 133);
+  box-shadow: 2px 2px 10px 2px #8eb2f5;
+}
+
+#root{
+  height: 625px;
+  overflow: hidden;
+  background: linear-gradient(290deg, rgb(248, 0, 215), rgb(103, 151, 214));
+  overflow-y: auto;
+}
+
+.cards_area{
+  
+  position: relative;
+  right: 150px;
+  left: 250px;
+  top: 120px;
+  width: 80%;
+  overflow-x: auto;
+  /* border: 7px solid rgb(101, 95, 206); */
+}
+
+/* The side navigation menu */
+.sidebar {
+    margin-top: 70px;  
+    width: 180px;
+    background-color: #6876c5;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    /* border: 7px solid red; */
+  }
+  
+  /* Sidebar links */
+  .sidebar a {
+    display: block;
+    color: rgb(47, 21, 65);
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  /* Active/current link */
+  .sidebar a.active {
+    background-color: #134734;
+    color: white;
+  }
+  
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.active) {
+    background-color: rgb(137, 138, 173);
+    color: white;
+  }
+  
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 700px) {
+    
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      margin-top: 60px;
+    }
+    
+    .sidebar a,h4 {
+      margin-top: 5%;
+      text-align: center;
+      float: none;
+    }
+    div.content {margin-left: 0;}
+    .cards_area {
+      position: relative;
+      left: 40px;
+      right:150px;
+      top: 120px;
+      width: 80%;
+      overflow-x: auto;
+      }
+  }
+  
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+    .sidebar a,h4 {
+      margin-top: 5%;
+      text-align: center;
+      float: none;
+    }
+    .cards_area {
+      position: relative;
+      left: 20px;
+      right:150px;
+      top: 120px;
+      width: 80%;
+      overflow-x: auto;
+    }
+  }
+
+
+  @media screen and (max-width: 572px) {
+    .cards_area {
+      position: relative;
+      left: 20px;
+      right:150px;
+      top: 120px;
+      width: 80%;
+      overflow-x: auto;
+    }
+    .card{
+      width: 10rem;
+    }
+  }
+
+  
+  .reg_page{
+    position: relative;
+    left: 16%;
+    margin-top: 3%;
+    width: 70%;
+    height: 550px;
+    border: 4px solid rgb(10, 10, 10);
+    border-radius: 20px;
+    padding-top: 20px; 
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-bottom: 100px;
+    background-color: rgb(57, 57, 77);
+    color: rgb(200, 204, 255);
+    box-shadow: 5px 10px 8px 10px #851769;  
+  }
+
+  .login_page{
+    position: relative;
+    left: 16%;
+    margin-top: 3%;
+    width: 70%;
+    height: 550px;
+    border: 4px solid rgb(10, 10, 10);
+    border-radius: 20px;
+    padding-top: 100px; 
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-bottom: 100px;
+    background-color: rgb(57, 57, 77);
+    color: rgb(200, 204, 255);
+    box-shadow: 5px 10px 8px 10px #851769;  
+  }
+
+  @media screen and (max-width: 900px) {
+    .login_page{
+    position: relative;
+    left: 20%;
+    margin-top: 2%;
+    width: 70%;
+    border: 4px solid rgb(10, 10, 10);
+    border-radius: 20px;
+    padding-top: 100px; 
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-bottom: 100px;
+    background-color: rgb(57, 57, 77);
+    color: rgb(200, 204, 255);
+    box-shadow: 5px 10px 8px 10px #851769;
+  }
+      }
+
+      
